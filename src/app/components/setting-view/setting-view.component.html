@@ -1,0 +1,27 @@
+<div id="settingOverview" style="height:90vh;display:flex;margin-top: 10%;flex-direction: column;align-items: center;">
+  <div style="width: 80%;display: flex;justify-content: center;align-items: center;color:#ffffde">
+    <div style="background-color: #a0a5c175;    border-radius: 60%;padding: 10%;">
+      <img src="../assets/img/people.svg" height="60px" />
+      <i class="mdi mdi-plus" style="color:#a0a5c1;position: absolute;top: 24%;left: 27%;font-size: 7vh;"></i>
+    </div>
+    <div style="display: flex;flex-direction: column;margin-left: 10%;">
+      <span style="    font-size: 20px;">Nickname:</span>
+      <div style="display:flex;flex-direction: row;font-size:30px">
+        <span>TobsenKing</span>
+        <i class="mdi mdi-pencil" style="color:#a0a5c1;margin-left:5%"></i>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top:10%;width: 80%;display: flex;flex-direction:column;align-items: center;color:#ffffde;font-size: 20px;background-color: #a0a5c175;border-radius:5%;padding: 5%;">
+    <div style="display: flex;flex-direction:row;justify-content: space-between;width: 100%;">
+      <span>Music on</span>
+      <mat-slide-toggle [color]="primary" [checked]="true">
+      </mat-slide-toggle>
+    </div>
+    <div style="display: flex;flex-direction:row;justify-content: space-between;width: 100%;margin-top:5%;">
+      <span>Play Store-Account</span>
+      <mat-slide-toggle [color]="primary" [checked]="false">
+      </mat-slide-toggle>
+    </div>
+  </div>
+</div>

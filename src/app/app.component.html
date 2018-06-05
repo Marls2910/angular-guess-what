@@ -1,0 +1,30 @@
+<div [ngClass]="{'horizontal-view': router.url === '/game-mode', 'vertical-view': router.url !== '/game-mode'}">
+  <div id="header" style="box-shadow:0 3px 6px rgba(0, 0, 0, 0.31), 0 3px 6px rgba(0,0,0,0.23);height: 10vh;background:linear-gradient(to bottom, #3f51b5 0%,#3f51b594 100%);display: flex;align-items: center;justify-content: space-between;padding: 0 3vh;">
+    <i *ngIf="router.url !== '/' && router.url !== '/game-mode'" class="mdi mdi-arrow-left" style="font-size: 4vh;font-family: fantasy;color:orange;cursor: pointer;" routerLink="/"></i>
+    <span style="font-size: 4vh;font-family: fantasy;color:orange">Guess What?</span>
+    <span *ngIf="router.url === '/game-mode'"><i class="mdi mdi-information-outline"></i> searched object is red.</span>
+    <div *ngIf="router.url === '/game-mode'" style="    display: flex;    height: 22px;">
+        <div style="background:linear-gradient(to bottom, #3f51b5 0%,#3f51b594 100%);min-width: 35px;text-align: center;border-radius:5px;box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12)">
+            <i class="mdi mdi-account-alert"></i>
+          </div>
+      <div style="background:linear-gradient(to bottom, #3f51b5 0%,#3f51b594 100%);margin-left:5px;min-width: 35px;text-align: center;border-radius:5px;box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12)">
+        <i class="mdi mdi-telegram"></i>
+      </div>
+      <div style="background:linear-gradient(to bottom, #009688 0%,#027d72 100%);margin-left:5px;min-width: 35px;text-align: center;border-radius:5px;box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12)">
+        <i class="mdi mdi-check"></i>
+      </div>
+      <div style="background:linear-gradient(to bottom, #8b0000 0%,#710202 100%);margin-left:5px;min-width: 35px;text-align: center;border-radius:5px;box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12)">
+        <i class="mdi mdi-close-outline"></i>
+      </div>
+    </div>
+    <div id="nav" *ngIf="router.url !== '/game-mode'">
+      <button mat-raised-button routerLink="/user-statistics" routerLinkActive="active">
+        <img src="../assets/img/001-cup-1.svg" style="height:4vh;" />
+      </button>
+      <button mat-raised-button routerLink="/settings" routerLinkActive="active">
+        <img src="../assets/img/002-settings.svg" style="height:4vh" />
+      </button>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</div>

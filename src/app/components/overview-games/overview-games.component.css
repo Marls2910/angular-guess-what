@@ -1,0 +1,8 @@
+.gameStatus {
+    width: 5vh;
+    margin: 1px;
+    border-radius: 5px;
+    height: 30px;
+    margin: 1px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.31), 0 3px 6px rgba(0,0,0,0)
+}
